@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: Arial, sans-serif;
+    background-color: rgb(204, 204, 255);
+    width: 100%;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+img{
+    width: 400px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #ABABFF;
+}
+
+.navbar a{
+    color: black;
+    font-weight: 700;
+}
+
+
+.nav-contents{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.underline{
+    position: relative;
+}
+
+.underline:hover::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.2s ease-in;
+}
+
+.nav-span{
+    background-color: #ABABFF;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/* Home Sec */
+
+.home-sec{
+    margin-top: 3rem;
+    min-height: 100vh;
+}
+
+.home-div{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "grid1" "grid2";
+    justify-items: center;
+    padding: 50px;
+}
+
+.home-grid1{
+    grid-area: "grid1";
+    align-self: center;
+}
+
+.home-grid1 h1{
+    margin-bottom: 1rem;
+    font-size: 10rem;
+}
+
+.home-grid1 p{
+    width: 80%;
+    font-weight: 90;
+    color: #333;
+    background-color: #ABABFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.home-grid2{
+    grid-area: "grid2";
+    align-self: center;
+}
+
+.home-grid2 img{
+    border-radius: 10px;
+}
+
+/* Shop Sec */
+
+.shop-sec h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.shop-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    gap: 2rem;
+    padding: 20px;
+    justify-items: center;
+    align-self: center;
+}
+
+.shop-card{
+    color: black;
+    background-color: #8A8AFF;
+    border-radius: 10px;
+    display: grid;
+    gap: 1rem;
+    grid-row: span 3;
+    grid-template-rows: subgrid; 
+    padding: 20px;
+    justify-items: center;
+}
+
+.shop-card:hover{
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in;
+    box-shadow: 5px 5px 5px 2px #6A6AFF;
+    cursor: pointer;
+}
+
+.shop-card img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Contact Sec */
+
+.contact-sec{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ABABFF;
+    padding: 50px;
+}
+
+.contact-sec h1{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.contact-div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 400px;
+}
+
+.contact-div form input{
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    width: 80%;
+}
+
+.contact-div form input::placeholder{
+    color: #333;
+    font-weight: 700;
+}
+
+
+.contactBtn{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    background-color: #8A8AFF;
+    width: 80%;
+}
+
+.contactBtn:hover{
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in;
+    box-shadow: 0 0 5px 5px #6A6AFF;
+    cursor: pointer;
+}
